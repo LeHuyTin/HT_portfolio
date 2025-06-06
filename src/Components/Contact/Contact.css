@@ -9,7 +9,7 @@
 .contact-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 100px;
+  gap: 60px;
   width: 100%;
   max-width: 1200px;
   justify-content: center;
@@ -18,14 +18,17 @@
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
   padding: 40px 24px;
   margin: 30px auto;
+  min-height: 600px;
+  align-items: flex-start;
 }
 
 .contact-left {
   display: flex;
   flex-direction: column;
   gap: 35px;
+  flex: 1;
   min-width: 320px;
-  max-width: 400px;
+  max-width: 450px;
 }
 
 .contact-left h1 {
@@ -58,8 +61,9 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  flex: 1;
   min-width: 320px;
-  max-width: 500px;
+  max-width: 450px;
   width: 100%;
 }
 
@@ -111,7 +115,7 @@
   font-size: 20px;
   transition: color 0.2s;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  width: 108%;
+  width: 100%;
   background: #222;
   color: white;
   font-weight: 600;
@@ -170,7 +174,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 406px;
+  min-height: 520px;
   animation: fadeIn 0.5s ease-in-out;
   padding: 60px 40px;
   width: 100%;
@@ -246,7 +250,7 @@
 
 @keyframes fill {
   100% {
-    background: linear-gradient(250deg, rgba(252, 74, 26, 0.1) 0%, rgba(247, 183, 51, 0.1) 100%);
+    background: rgba(252, 74, 26, 0.1);
   }
 }
 
@@ -273,62 +277,37 @@
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
-  .contact {
-    padding: 120px 20px 40px;
+@media (min-width: 769px) {
+  .contact-section {
+    gap: 80px;
+    justify-content: space-between;
+    align-items: stretch;
   }
   
+  .contact-left,
+  .contact-right {
+    flex: 1;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
   .contact-section {
-    flex-direction: column;
     gap: 40px;
     padding: 30px 20px;
-    margin: 20px auto;
-  }
-  
-  .contact-left {
-    min-width: auto;
-    max-width: 100%;
-    text-align: center;
-    gap: 25px;
+    min-height: auto;
   }
   
   .contact-left h1 {
-    font-size: 36px;
+    font-size: 40px;
   }
   
   .contact-left p {
-    font-size: 18px;
-  }
-  
-  .contact-detail {
-    font-size: 16px;
-    padding: 15px;
-  }
-  
-  .contact-right {
-    min-width: auto;
-    max-width: 100%;
-    gap: 20px;
-  }
-  
-  .contact-right label {
     font-size: 20px;
   }
   
-  .contact-right input,
-  .contact-right textarea {
-    font-size: 18px;
-    padding: 14px 16px;
-    margin-bottom: 15px;
-  }
-  
-  .contact-submit {
-    padding: 15px 40px;
-    font-size: 18px;
-  }
-  
   .success-text {
-    font-size: 28px;
+    font-size: 24px;
   }
   
   .success-container {
@@ -344,62 +323,5 @@
   .checkmark {
     width: 100px;
     height: 100px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .contact {
-    padding: 100px 15px 30px;
-  }
-  
-  .contact-section {
-    padding: 25px 15px;
-    gap: 30px;
-  }
-  
-  .contact-left {
-    gap: 20px;
-  }
-  
-  .contact-left h1 {
-    font-size: 28px;
-  }
-  
-  .contact-left p {
-    font-size: 16px;
-  }
-  
-  .contact-detail {
-    font-size: 14px;
-    padding: 12px;
-  }
-  
-  .contact-right label {
-    font-size: 18px;
-  }
-  
-  .contact-right input,
-  .contact-right textarea {
-    font-size: 16px;
-    padding: 12px 14px;
-  }
-  
-  .contact-submit {
-    padding: 12px 30px;
-    font-size: 16px;
-  }
-  
-  .success-text {
-    font-size: 24px;
-  }
-  
-  .success-circle {
-    width: 80px;
-    height: 80px;
-  }
-
-  .checkmark {
-    width: 80px;
-    height: 80px;
   }
 }
