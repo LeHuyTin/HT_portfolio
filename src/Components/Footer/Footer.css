@@ -1,25 +1,30 @@
 .footer {
-    margin: 80px 250px;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.footer-top {
     display: flex;
     justify-content: space-between;
+    padding: 20px 100px;
+    z-index: 999;
 }
 
-.footer-top-left p {
+.footer-left p {
     font-size: 25px;
     font-weight: 500;
     max-width: 400px;
 }
 
-.footer-top-right {
+.footer-right {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 35px;
+}
+
+.social-icon {
+  font-size: 30px;
+  color: #000;
+  transition:  0.2s ease;
+}
+
+.social-icon:hover {
+    scale: 1.1;
 }
 
 .footer-email-input {

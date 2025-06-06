@@ -1,0 +1,338 @@
+.project-detail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeInOverlay 0.3s ease-out;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.project-detail-container {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 24px;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  animation: slideInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.project-detail-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-detail-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.project-detail-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 4px;
+}
+
+.project-detail-header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #64748b;
+}
+
+.close-button:hover {
+  background: rgba(0, 0, 0, 0.2);
+  color: #000000;
+  transform: scale(1.05);
+}
+
+.project-detail-title-section {
+  flex: 1;
+  margin-right: 60px;
+}
+
+.project-detail-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(250deg, #fc4a1a 0%, #f7b733 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.project-detail-links {
+  display: flex;
+  gap: 12px;
+}
+
+.detail-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.github-btn {
+  background: linear-gradient(135deg, #333, #555);
+  color: white;
+  border: none;
+}
+
+.github-btn:hover {
+  background: linear-gradient(135deg, #000000, #777);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-detail-content {
+  padding: 0 40px 40px 40px;
+}
+
+.project-detail-image-section {
+  margin-bottom: 40px;
+}
+
+.project-detail-main-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.project-detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.detail-section {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.detail-section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail-section-title::before {
+  content: "";
+  width: 4px;
+  height: 24px;
+  background: linear-gradient(250deg, #fc4a1a 0%, #f7b733 100%);
+  border-radius: 2px;
+}
+
+.detail-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.detail-tech-tag {
+  padding: 8px 16px;
+  background: linear-gradient(360deg, #fc4a1a 0%, #f7b733 100%);
+  color: white;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.detail-description,
+.detail-challenges {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #475569;
+  margin: 0;
+}
+
+.detail-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detail-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+.feature-icon {
+  color: #10b981;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.detail-screenshots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.detail-screenshot {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.detail-screenshot:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-detail-overlay {
+    padding: 10px;
+  }
+
+  .project-detail-container {
+    max-height: 95vh;
+    border-radius: 16px;
+  }
+
+  .project-detail-header {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .project-detail-title-section {
+    margin-right: 0;
+  }
+
+  .project-detail-title {
+    font-size: 1.8rem;
+  }
+
+  .close-button {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-detail-content {
+    padding: 0 20px 20px 20px;
+  }
+
+  .project-detail-main-image {
+    height: 250px;
+  }
+
+  .detail-section {
+    padding: 16px;
+  }
+
+  .detail-section-title {
+    font-size: 1.2rem;
+  }
+
+  .detail-screenshots {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-screenshot {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-detail-header {
+    padding: 15px;
+  }
+
+  .project-detail-title {
+    font-size: 1.5rem;
+  }
+
+  .project-detail-content {
+    padding: 0 15px 15px 15px;
+  }
+
+  .detail-action-btn {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .project-detail-main-image {
+    height: 200px;
+  }
+}

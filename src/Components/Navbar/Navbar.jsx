@@ -1,43 +1,53 @@
 import React from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
-import underline from "../../assets/underline.svg";
-import { useState } from "react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const [menu, setMenu] = useState("home");
+  const location = useLocation();
 
   return (
     <div className="navbar">
-      <img src={logo} alt="" />
-      <ul className="nav-menu">
-        <li>
-          <AnchorLink className="anchor-link" href="#home">
-            <p onClick={() => setMenu("home")}>Home</p>
-          </AnchorLink>
-          {menu === "home" ? <img src={underline} alt="" /> : <></>}
-        </li>
-        <li>
-          <AnchorLink className="anchor-link" offset={50} href="#about">
-            <p onClick={() => setMenu("about")}>About Me</p>
-          </AnchorLink>
-          {menu === "about" ? <img src={underline} alt="" /> : <></>}
-        </li>
-        <li>
-          <AnchorLink className="anchor-link" offset={50} href="#project">
-            <p onClick={() => setMenu("project")}>My Project</p>
-          </AnchorLink>
-          {menu === "project" ? <img src={underline} alt="" /> : <></>}
-        </li>
-        <li>
-          <AnchorLink className="anchor-link" offset={50} href="#contact">
-            <p onClick={() => setMenu("contact")}>Contact</p>
-          </AnchorLink>
-          {menu === "contact" ? <img src={underline} alt="" /> : <></>}
-        </li>
-      </ul>
-      <div className="nav-connect">Connect With Me</div>
+      <Link to="/">
+        <img src={logo} alt="Logo" />
+      </Link>
+      <div className="nav-menu">
+        <ul className="menu-items">
+          <li>
+            <Link
+              to="/"
+              className={`anchor-link ${
+                location.pathname === "/" ? "active" : ""
+              }`}
+            >
+              <p className="menu-item">Home</p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about-me"
+              className={`anchor-link ${
+                location.pathname === "/about-me" ? "active" : ""
+              }`}
+            >
+              <p className="menu-item">About Me</p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/my-project"
+              className={`anchor-link ${
+                location.pathname === "/my-project" ? "active" : ""
+              }`}
+            >
+              <p className="menu-item">Portfolio</p>
+            </Link>
+          </li>
+        </ul>
+        <Link to="/contact" className="anchor-link">
+          <p className="nav-connect">Contact</p>
+        </Link>
+      </div>
     </div>
   );
 };

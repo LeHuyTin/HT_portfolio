@@ -5,7 +5,16 @@
 
 body {
   height: 100vh;
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   font-family: 'outfit';
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
