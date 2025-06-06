@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://lehuytin.github.io/portfolio-react",
+  "homepage": "https://lehuytin.github.io/HT_portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,6 +9,7 @@ body {
   background: white;
   color: black;
   font-family: 'outfit';
+  overflow-x: hidden;
 }
 
 *::-webkit-scrollbar {
@@ -17,4 +19,17 @@ body {
 * {
   -ms-overflow-style: none; 
   scrollbar-width: none; 
+}
+
+/* Global Mobile Responsive */
+@media screen and (max-width: 768px) {
+  html, body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html, body {
+    font-size: 13px;
+  }
 }

@@ -161,3 +161,102 @@
   color: #000000;
   text-transform: uppercase;
 }
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    gap: 30px;
+    padding: 120px 20px 40px;
+  }
+  
+  .about-left {
+    order: 1;
+  }
+  
+  .about-left img {
+    width: 300px;
+    height: 350px;
+    border-radius: 20px;
+  }
+  
+  .about-right {
+    order: 2;
+    gap: 25px;
+    text-align: center;
+  }
+  
+  .about-right p {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+  }
+  
+  .about-para {
+    gap: 25px;
+    font-size: 18px;
+  }
+  
+  .about-cv {
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .cv-download-btn {
+    padding: 15px 40px;
+    font-size: 18px;
+  }
+  
+  .back-arrow {
+    font-size: 60px;
+  }
+  
+  .skill-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .skill-item {
+    gap: 8px;
+  }
+  
+  .skill-name {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about {
+    padding: 100px 15px 30px;
+    gap: 25px;
+  }
+  
+  .about-left img {
+    width: 250px;
+    height: 300px;
+  }
+  
+  .about-right p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .about-para {
+    font-size: 16px;
+    gap: 20px;
+  }
+  
+  .cv-download-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+  
+  .back-arrow {
+    font-size: 50px;
+  }
+  
+  .skill-name {
+    font-size: 14px;
+  }
+}

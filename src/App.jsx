@@ -11,7 +11,7 @@ import { ToastProvider } from "./Components/toastContext";
 const App = () => {
   return (
     <ToastProvider>
-     <Router basename="/lehuytin-portfolio">
+     <Router basename="/HT_portfolio">
       <Navbar />
       <Routes>
         <Route path="/" element={<Hero />} />

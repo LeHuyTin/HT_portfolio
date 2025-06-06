@@ -110,3 +110,78 @@
 .portfolio:hover::before {
   width: 160%;
 }
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    gap: 40px;
+    padding: 120px 20px 40px;
+    text-align: center;
+  }
+  
+  .hero-left {
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .hero-left-text {
+    gap: 15px;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+  }
+  
+  .portfolio {
+    padding: 15px 40px;
+    font-size: 18px;
+  }
+  
+  .hero-right {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .hero img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    padding: 100px 15px 30px;
+    gap: 30px;
+  }
+  
+  .hero-left {
+    gap: 25px;
+  }
+  
+  .hero h1 {
+    font-size: 28px;
+  }
+  
+  .hero p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .portfolio {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+  
+  .hero-right {
+    max-width: 250px;
+  }
+}

@@ -273,22 +273,62 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 120px 20px 40px;
+  }
+  
   .contact-section {
+    flex-direction: column;
     gap: 40px;
     padding: 30px 20px;
+    margin: 20px auto;
+  }
+  
+  .contact-left {
+    min-width: auto;
+    max-width: 100%;
+    text-align: center;
+    gap: 25px;
   }
   
   .contact-left h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
   
   .contact-left p {
+    font-size: 18px;
+  }
+  
+  .contact-detail {
+    font-size: 16px;
+    padding: 15px;
+  }
+  
+  .contact-right {
+    min-width: auto;
+    max-width: 100%;
+    gap: 20px;
+  }
+  
+  .contact-right label {
     font-size: 20px;
   }
   
+  .contact-right input,
+  .contact-right textarea {
+    font-size: 18px;
+    padding: 14px 16px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-submit {
+    padding: 15px 40px;
+    font-size: 18px;
+  }
+  
   .success-text {
-    font-size: 24px;
+    font-size: 28px;
   }
   
   .success-container {
@@ -304,5 +344,62 @@
   .checkmark {
     width: 100px;
     height: 100px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact {
+    padding: 100px 15px 30px;
+  }
+  
+  .contact-section {
+    padding: 25px 15px;
+    gap: 30px;
+  }
+  
+  .contact-left {
+    gap: 20px;
+  }
+  
+  .contact-left h1 {
+    font-size: 28px;
+  }
+  
+  .contact-left p {
+    font-size: 16px;
+  }
+  
+  .contact-detail {
+    font-size: 14px;
+    padding: 12px;
+  }
+  
+  .contact-right label {
+    font-size: 18px;
+  }
+  
+  .contact-right input,
+  .contact-right textarea {
+    font-size: 16px;
+    padding: 12px 14px;
+  }
+  
+  .contact-submit {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+  
+  .success-text {
+    font-size: 24px;
+  }
+  
+  .success-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .checkmark {
+    width: 80px;
+    height: 80px;
   }
 }
