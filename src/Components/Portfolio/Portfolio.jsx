@@ -41,8 +41,15 @@ const Portfolio = () => {
         "User-friendly interface with React",
         "Integration with a comprehensive recipe database",
       ],
-      challenges:
-        "Implementing accurate NLP for understanding diverse user inputs, creating a comprehensive recipe database, and ensuring the chatbot provides relevant and helpful cooking advice.",
+      detailedDescription: [
+        "Developed a full stack AI-powered chatbot individually in 6 weeks",
+        "Utilized advanced NLP to understand and answer diverse cooking and recipe queries",
+        "Users can get recipe suggestions based on available ingredients and step-by-step instructions",
+        "Implemented speech-to-text for hands-free operation and image recognition for dish identification",
+        "Designed and built both backend and frontend, including a custom recipe database",
+        "Deployed a scalable, production-ready solution using Python, React, MongoDB, and cloud services",
+        "Gained deep experience in AI product development, deployment, and user experience optimization",
+      ],
       screenshots: [p1d1, p1d2, p1d3, p1d4],
     },
     {
@@ -63,8 +70,15 @@ const Portfolio = () => {
         "News and updates section for charity activities",
         "Contact form for inquiries and support",
       ],
-      challenges:
-        "Integrating a secure and user-friendly donation system, ensuring data privacy for donors and volunteers, and building a scalable backend for campaign and user management. Another challenge was creating an engaging UI that encourages participation while remaining accessible to all users.",
+      detailedDescription: [
+        "Collaborated in a team to build a modern charity website; responsible for all frontend development",
+        "Platform connects non-profits with donors and volunteers via a responsive, accessible UI",
+        "Built reusable React components and ensured cross-browser compatibility",
+        "Worked closely with backend team to integrate real-time campaign data and user authentication",
+        "Implemented accessibility best practices and intuitive navigation",
+        "Designed engaging layouts to encourage community participation",
+        "Enhanced teamwork, communication, and large-scale web application skills through agile workflows",
+      ],
       screenshots: [p2d1, p2d2, p2d3, p2d4, p2d5, p2d6, p2d7, p2d8],
     },
     // {

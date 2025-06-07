@@ -57,12 +57,10 @@ const Contact = () => {
       }).then((res) => res.json());
 
       if (res.success) {
-        // Show success animation
+        // Show success animation immediately
         setShowSuccess(true);
-        
         // Reset form
         setFormData({ name: '', email: '', message: '' });
-        
         // Hide success animation after 3 seconds
         setTimeout(() => {
           setShowSuccess(false);
@@ -252,10 +250,24 @@ const Contact = () => {
                       initial={{ x: 50, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
                     >
                       Send
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        style={{ marginLeft: 10, marginBottom:3, verticalAlign: 'middle', transform: 'rotate(45deg)' }}
+                        className="send-icon"
+                      >
+                        <line x1="22" y1="2" x2="11" y2="13" />
+                        <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                      </svg>
                     </motion.button>
                   </form>
                 </motion.div>
