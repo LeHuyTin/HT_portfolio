@@ -58,7 +58,7 @@ const Portfolio = () => {
       description:
         "A modern charity website for connecting donors and volunteers.",
       image: Project2,
-      github: "https://github.com/yourusername/project1",
+      github: "https://github.com/LeHuyTin/Charity-Website",
       technologies: ["HTML & CSS", "Spring Boot", "JavaScript"],
       fullDescription:
         "This charity website is designed to help non-profit organizations connect with donors and volunteers efficiently. Built with HTML, CSS, Java, and JavaScript, the platform allows users to browse charity campaigns, make secure donations, and register as volunteers. The site features a clean, responsive design and an easy-to-use interface to encourage community engagement and support for various causes.",
