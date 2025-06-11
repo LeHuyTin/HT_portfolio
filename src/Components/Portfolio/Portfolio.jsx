@@ -28,7 +28,7 @@ const Portfolio = () => {
       description:
         "AI-powered chatbot for recipe recommendations and cooking tips",
       image: Project1,
-      github: "https://github.com/yourusername/project2",
+      github: "https://github.com/LeHuyTin/AI-F",
       technologies: ["Python", "NLP", "ReactJS", "MongoDB"],
       fullDescription:
         "An intelligent chatbot that helps users discover recipes and can also look up dishes based on available ingredients. Uses natural language processing to understand user queries and provide accurate dish and recipe recommendations.",
