@@ -162,7 +162,6 @@
   text-transform: uppercase;
 }
 
-/* Mobile Responsive */
 @media screen and (max-width: 768px) {
   .about {
     flex-direction: column;

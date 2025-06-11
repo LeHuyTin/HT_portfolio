@@ -2,9 +2,11 @@ import React, { useRef } from "react";
 import "./About.css";
 import about_img from "../../assets/about_img.jpg";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
   const imgRef = useRef();
+  const navigate = useNavigate();
 
   const handleMouseMove = (e) => {
     const img = imgRef.current;
@@ -13,9 +15,10 @@ const About = () => {
     const y = e.clientY - rect.top;
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-    const rotateX = ((y - centerY) / centerY) * 4; // giảm từ 10 xuống 4
-    const rotateY = ((x - centerX) / centerX) * 6; // giảm từ 14 xuống 6
-    img.style.transform = `perspective(800px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.04)`;
+    const rotateX = ((y - centerY) / centerY) * 4;
+    const rotateY = ((x - centerX) / centerX) * 6;
+    const transform = `perspective(800px) rotateX(${-rotateX}deg) rotateY(${rotateY}deg) scale(1.04)`;
+    img.style.transform = transform;
     img.style.boxShadow =
       "0 24px 48px rgba(252,74,26,0.18), -10px 10px 15px rgba(0,0,0,0.5)";
     img.style.zIndex = 2;
@@ -26,7 +29,17 @@ const About = () => {
     img.style.transform = "";
     img.style.boxShadow = "";
     img.style.zIndex = "";
+    setIsHovered(false);
   };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleContactClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <div id="about" className="about">
       <div className="about-left">
@@ -36,17 +49,26 @@ const About = () => {
           animate={{ scale: 1, opacity: 1, y: 0 }}
           transition={{ duration: 0.2 }}
         >
-          <img
-            src={about_img}
-            alt=""
-            ref={imgRef}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            style={{
-              transition:
-                "transform 0.4s cubic-bezier(.25,.8,.25,1), box-shadow 0.4s cubic-bezier(.25,.8,.25,1)",
-            }}
-          />
+          <div
+            className="about-profile-card"
+            style={{ display: "flex", justifyContent: "center" }}
+          >
+            <div className="profile-card">
+              <img
+                src={about_img}
+                alt="Profile"
+                ref={imgRef}
+                className="profile-card-img"
+                style={{
+                  transition:
+                    "transform 0.4s cubic-bezier(.25,.8,.25,1), box-shadow 0.4s cubic-bezier(.25,.8,.25,1)",
+                  display: "block",
+                }}
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
+              />
+            </div>
+          </div>
         </motion.div>
         <motion.div
           className="skill-container"
