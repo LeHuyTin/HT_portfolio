@@ -131,7 +131,7 @@ const About = () => {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.3 }}
         >
-          <a href="#" download className="cv-download-btn">
+          <a href="/Intern_CV_LeHuyTin.pdf" download className="cv-download-btn">
             DOWNLOAD CV
           </a>
           <span className="back-arrow">&laquo;</span>

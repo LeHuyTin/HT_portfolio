@@ -58,7 +58,7 @@ const Portfolio = () => {
       description:
         "A modern charity website for connecting donors and volunteers.",
       image: Project2,
-      github: "https://github.com/LeHuyTin/Charity-Website",
+      github: "https://github.com/ninhnguyen2623/J2ee_WebTuThien",
       technologies: ["HTML & CSS", "Spring Boot", "JavaScript"],
       fullDescription:
         "This charity website is designed to help non-profit organizations connect with donors and volunteers efficiently. Built with HTML, CSS, Java, and JavaScript, the platform allows users to browse charity campaigns, make secure donations, and register as volunteers. The site features a clean, responsive design and an easy-to-use interface to encourage community engagement and support for various causes.",
@@ -81,59 +81,6 @@ const Portfolio = () => {
       ],
       screenshots: [p2d1, p2d2, p2d3, p2d4, p2d5, p2d6, p2d7, p2d8],
     },
-    // {
-    //   id: 3,
-    //   title: "Task Management App",
-    //   description: "Collaborative task management tool with real-time updates",
-    //   image: "/images/project3-demo.jpg",
-    //   github: "https://github.com/yourusername/project3",
-    //   technologies: ["Vue.js", "Firebase", "CSS3"],
-    //   fullDescription:
-    //     "A collaborative task management application that enables teams to organize, track, and complete projects efficiently. Features real-time synchronization, team collaboration tools, and project analytics.",
-    //   features: [
-    //     "Real-time task synchronization",
-    //     "Team collaboration and assignment",
-    //     "Project timeline and milestone tracking",
-    //     "File attachment and commenting system",
-    //     "Progress analytics and reporting",
-    //     "Custom project templates",
-    //     "Mobile-responsive interface",
-    //   ],
-    //   challenges:
-    //     "Implementing real-time synchronization across multiple users, designing an intuitive interface for complex project management features, and ensuring data consistency in collaborative environments.",
-    //   screenshots: [
-    //     "/images/project3-screenshot1.jpg",
-    //     "/images/project3-screenshot2.jpg",
-    //     "/images/project3-screenshot3.jpg",
-    //   ],
-    // },
-    // {
-    //   id: 4,
-    //   title: "Weather Dashboard",
-    //   description:
-    //     "Beautiful weather dashboard with detailed forecasts and maps",
-    //   image: "/images/project4-demo.jpg",
-    //   github: "https://github.com/yourusername/project4",
-    //   technologies: ["React", "API", "Chart.js"],
-    //   fullDescription:
-    //     "A comprehensive weather dashboard that provides detailed weather information, forecasts, and interactive maps. Features beautiful data visualizations and location-based weather alerts.",
-    //   features: [
-    //     "Current weather conditions display",
-    //     "7-day weather forecast",
-    //     "Interactive weather maps",
-    //     "Weather alerts and notifications",
-    //     "Historical weather data charts",
-    //     "Multiple location tracking",
-    //     "Customizable dashboard widgets",
-    //   ],
-    //   challenges:
-    //     "Integrating multiple weather APIs for comprehensive data, creating responsive data visualizations, and implementing accurate location-based services while maintaining good performance.",
-    //   screenshots: [
-    //     "/images/project4-screenshot1.jpg",
-    //     "/images/project4-screenshot2.jpg",
-    //     "/images/project4-screenshot3.jpg",
-    //   ],
-    // },
   ];
 
   const handleDetailClick = (project) => {
