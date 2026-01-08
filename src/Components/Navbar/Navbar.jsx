@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import home from "../../assets/home.png";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
@@ -17,9 +16,6 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <Link to="/" onClick={closeMobileMenu}>
-        <img src={home} alt="Home" />
-      </Link>
       
       <div className="nav-mob-open" onClick={toggleMobileMenu}>
         ☰

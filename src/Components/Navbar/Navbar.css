@@ -5,14 +5,11 @@
   left: 0;
   width: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 20px 100px;
   background: white;
 }
 
-.navbar img {
-  cursor: pointer;
-}
 
 .nav-menu {
   display: flex;
@@ -170,6 +167,7 @@
   
   .navbar img {
     display: none;
+    margin-right: 0;
   }
   
   .nav-menu {

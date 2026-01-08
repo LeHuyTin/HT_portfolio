@@ -1,3 +1,11 @@
+/* Đổi màu icon gửi khi hover */
+.contact-submit .send-icon path {
+  transition: stroke 0.2s;
+}
+
+.contact-submit:hover .send-icon path {
+  stroke: #000;
+}
 /* Updated: 2025-06-07 - Desktop contact balance and consistent height fix */
 .contact {
   display: flex;
